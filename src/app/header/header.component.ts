@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { NgModule, Component, OnInit } from '@angular/core';
+import { TemplateService } from '../template.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(public templateService: TemplateService) { }
 
   ngOnInit() {
   }
 
+  public selectMenu(menu): void {
+    this.templateService.selectMenu(menu);
+  }
 }
