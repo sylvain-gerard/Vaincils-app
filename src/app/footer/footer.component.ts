@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {NgModule, Component, OnInit } from '@angular/core';
+import { TemplateService } from '../template.service';
 
 @Component({
   selector: 'app-footer',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  constructor(public templateService: TemplateService) { }
 
   ngOnInit() {
   }
-
+  public selectMenu(menu): void {
+    this.templateService.selectMenu(menu);
+  }
 }

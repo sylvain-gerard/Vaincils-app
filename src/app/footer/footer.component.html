@@ -1,3 +1,4 @@
-<p>
-  footer works!
-</p>
+<mat-toolbar color="primary">
+  <button mat-button [style.color]="templateService.selectedMenu == 'legal' ? 'white' : 'green'" routerLink="/legal">Legals Notices</button>
+  <button mat-button [style.color]="templateService.selectedMenu == 'credits' ? 'white' : 'green'" routerLink="/credits">Credits</button>
+</mat-toolbar>
