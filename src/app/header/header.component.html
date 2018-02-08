@@ -1,16 +1,24 @@
-<mat-toolbar color="primary" fxLayoutAlign="space-between center">
+<mat-toolbar class="mat-primary" fxLayoutAlign="space-between center">
   <h1>Mon site</h1>
   <button mat-icon-button [matMenuTriggerFor]="menu">
     <mat-icon>reorder</mat-icon>
   </button>
 </mat-toolbar>
-<mat-menu #menu="matMenu" color="secondary">
+<mat-menu #menu="matMenu" class="mat-accent">
   <button mat-menu-item
     routerLinkActive="active"
     [routerLinkActiveOptions]="{exact: true}"
     routerLink="/">
     <mat-icon>home</mat-icon>
     <span>Home</span>
-  </button>     
+  </button>  
+  <button
+    mat-menu-item
+    routerLinkActive="active"
+    [routerLink]="'/admin'">
+    <mat-icon>settings</mat-icon>
+    <span>Admin</span>
+  </button>
+  
 </mat-menu>
 
