@@ -1,23 +1,16 @@
 <mat-toolbar color="primary" fxLayoutAlign="space-between center">
-  <span>My Application</span>
-  <span class="example-spacer"></span>
+  <h1>Mon site</h1>
   <button mat-icon-button [matMenuTriggerFor]="menu">
-    <mat-icon>view_headline</mat-icon>
+    <mat-icon>reorder</mat-icon>
   </button>
-  <mat-menu #menu="matMenu" color="secondary">
-    <button mat-menu-item [style.color]="templateService.selectedMenu == 'home' ? 'red' : 'black'" (click)="selectMenu('home')" routerLink="/home">
-      Home
-    </button>
-    <button mat-menu-item [style.color]="templateService.selectedMenu == 'skills' ? 'red' : 'black'" (click)="selectMenu('skills')" routerLink="/skills">Skills
-    </button>
-    <button mat-menu-item [style.color]="templateService.selectedMenu == 'experiences' ? 'red' : 'black'" (click)="selectMenu('experiences')" routerLink="/experiences">
-      Experiences
-    </button>
-    <button mat-menu-item [style.color]="templateService.selectedMenu == 'contact' ? 'red' : 'black'" (click)="selectMenu('contact')" routerLink="/contact">
-      Contact
-    </button>
-    <button mat-menu-item [style.color]="templateService.selectedMenu == 'todo' ? 'red' : 'black'" (click)="selectMenu('todo')" routerLink="/todo">
-      TODOS
-    </button>
-  </mat-menu>
 </mat-toolbar>
+<mat-menu #menu="matMenu" color="secondary">
+  <button mat-menu-item
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{exact: true}"
+    routerLink="/">
+    <mat-icon>home</mat-icon>
+    <span>Home</span>
+  </button>     
+</mat-menu>
+

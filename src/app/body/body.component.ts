@@ -8,9 +8,10 @@ import { TemplateService } from '../template.service';
 })
 export class BodyComponent implements OnInit {
 
-  constructor(public templateService: TemplateService) { }
+  public isSmallScreen: boolean;
 
-  ngOnInit() {
-  }
+  constructor(public templateService: TemplateService) {}
+
+  ngOnInit() {}
 
 }

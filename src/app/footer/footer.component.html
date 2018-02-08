@@ -1,4 +1,4 @@
-<mat-toolbar color="primary">
-  <button mat-button [style.color]="templateService.selectedMenu == 'legal' ? 'white' : 'green'" routerLink="/legal">Legals Notices</button>
-  <button mat-button [style.color]="templateService.selectedMenu == 'credits' ? 'white' : 'green'" routerLink="/credits">Credits</button>
+<mat-toolbar color="primary" fxLayout fxLayoutGap="1em">
+    <a class="mat-body-2" routerLinkActive="active" [routerLink]="'/legal'">Legal notice</a>
+    <a class="mat-body-2" routerLinkActive="active" [routerLink]="'/credits'">Credits</a>
 </mat-toolbar>

@@ -1,5 +1,6 @@
 import { NgModule, Component, OnInit } from '@angular/core';
 import { TemplateService } from '../template.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -8,10 +9,9 @@ import { TemplateService } from '../template.service';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(public templateService: TemplateService) { }
+  constructor(public templateService: TemplateService, public route: ActivatedRoute) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   public selectMenu(menu): void {
     this.templateService.selectMenu(menu);
