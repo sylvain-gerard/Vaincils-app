@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+
+import { DataTablesModule } from 'angular-datatables';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { BodyComponent } from './body/body.component';
@@ -33,7 +36,8 @@ import { LayoutModule } from '@angular/cdk/layout';
   imports: [
     BrowserModule, BrowserAnimationsModule, AppRoutingModule, FlexLayoutModule, LayoutModule,
     MatButtonModule, MatCheckboxModule, MatToolbarModule, MatMenuModule, MatIconModule, MatCardModule, MatFormFieldModule,
-    MatSidenavModule, MatGridListModule
+    MatSidenavModule, MatGridListModule,
+    DataTablesModule
   ],
   providers: [TemplateService],
   bootstrap: [AppComponent]
