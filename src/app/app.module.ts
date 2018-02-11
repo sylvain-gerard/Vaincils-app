@@ -24,6 +24,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { LayoutModule } from '@angular/cdk/layout';
+import { DatatablesComponent } from './datatables/datatables.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { LayoutModule } from '@angular/cdk/layout';
     HeaderComponent,
     BodyComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    DatatablesComponent
   ],
   imports: [
     BrowserModule, BrowserAnimationsModule, AppRoutingModule, FlexLayoutModule, LayoutModule,
